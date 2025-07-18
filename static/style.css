@@ -1,0 +1,22 @@
+.result-box {
+    background: #fff8e1;
+    border-left: 5px solid #ffb300;
+    padding: 25px;
+    margin-top: 25px;
+    border-radius: 10px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    animation: fadeInUp 0.6s ease-out;
+    width: 100%;
+    max-width: 450px;
+}
+
+.result-box h2 {
+    color: #5936b4;
+    margin-bottom: 15px;
+}
+
+.result-box p {
+    margin: 10px 0;
+    font-size: 15px;
+    color: #333;
+}
