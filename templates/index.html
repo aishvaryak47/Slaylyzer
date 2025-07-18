@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Slaylyzer</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+
+</head>
+<body>
+    <h1>Slaylyzer: Outfit Rater & Vibe Analyzer</h1>
+    <form method="POST" enctype="multipart/form-data">
+        <input type="file" name="image" required>
+        <button type="submit">Rate My Outfit</button>
+    </form>
+
+    {% if result %}
+    <div class="result-box">
+        <h2>✨ Vibe: {{ result.vibe }}</h2>
+        <p><strong>Suggestion:</strong> {{ result.suggestions }}</p>
+        <p><strong>Caption:</strong> {{ result.caption }}</p>
+        <p><strong>Hashtags:</strong> {{ result.hashtags }}</p>
+    </div>
+{% endif %}
+    <footer>
+        <p>&copy; 2023 Slaylyzer. All rights reserved.</p>
+    </footer>
+
+    <script src="{{ url_for('static', filename='script.js') }}"></script>
+</body>
+</html>
